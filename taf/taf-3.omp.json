@@ -1,0 +1,94 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "alignment": "left",
+            "segments": [
+                {
+                    "foreground": "green",
+                    "style": "plain",
+                    "template": " {{ .UserName }} on",
+                    "type": "session"
+                },
+                {
+                    "foreground": "blue",
+                    "properties": {
+                        "folder_separator_icon": "/",
+                        "style": "full"
+                    },
+                    "style": "plain",
+                    "template": "  {{ .Path }} ",
+                    "type": "path"
+                },
+                {
+                    "foreground": "yellow",
+                    "properties": {
+                        "fetch_stash_count": true,
+                        "commit_icon": "󰜘",
+                        "fetch_status": true
+                    },
+                    "style": "plain",
+                    "template": "{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} {{ if gt .Behind 0 }}{{end}}{{ if gt .Ahead 0 }}{{end}}",
+                    "type": "git"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "right",
+            "segments": [
+                {
+                    "foreground": "red",
+                    "properties": {
+                        "time_format": "15:04"
+                    },
+                    "style": "plain",
+                    "template": " {{ .CurrentDate | date .Format }}",
+                    "type": "time"
+                },
+                {
+                    "foreground": "green",
+                    "leading_diamond": " | ",
+                    "properties": {
+                        "style": "roundrock",
+                        "threshold": 100
+                    },
+                    "style": "diamond",
+                    "template": "{{ .FormattedMs }}",
+                    "type": "executiontime"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "foreground": "red",
+                    "style": "plain",
+                    "template": " ",
+                    "type": "root"
+                },
+                {
+                    "style": "plain",
+                    "foreground_templates": [
+                        "{{if gt .Code 0}}red{{end}}",
+                        "{{if eq .Code 0}}green{{end}}"
+                    ],
+                    "template": " ",
+                    "type": "text"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "secondary_prompt": {
+      "foreground_templates": [
+                        "{{if gt .Code 0}}red{{end}}",
+                        "{{if eq .Code 0}}green{{end}}"
+                    ],
+      "template": " "
+    },
+    "version": 3
+}
