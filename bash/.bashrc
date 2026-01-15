@@ -17,7 +17,7 @@ function y() {
 }
 
 alias cat='lolcat'
-
+alias live="live-server --no-browser"
 # Add your own exports, aliases, and functions here.
 #
 # Make an alias for invoking commands you use constantly

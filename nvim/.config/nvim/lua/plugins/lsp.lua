@@ -12,6 +12,7 @@ return {
         "css-lsp",
         "emmet-language-server",
         "svelte-language-server",
+        "prettier"
       })
     end,
   },

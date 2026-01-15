@@ -15,8 +15,12 @@ resize-overlay = never
 gtk-toolbar-style = flat
 
 # Cursor styling
-cursor-style = "block"
+cursor-style = "bar"
 cursor-style-blink = true
+
+# Selection
+selection-foreground = cell-background
+selection-background = cell-foreground
 
 # Cursor styling + SSH session terminfo
 # (all shell integration options must be passed together)
@@ -29,6 +33,8 @@ keybind = super+control+shift+alt+arrow_down=resize_split:down,100
 keybind = super+control+shift+alt+arrow_up=resize_split:up,100
 keybind = super+control+shift+alt+arrow_left=resize_split:left,100
 keybind = super+control+shift+alt+arrow_right=resize_split:right,100
+# taf keybinds
+keybind = super+alt=new_tab
 
 # Slowdown mouse scrolling
 mouse-scroll-multiplier = 0.95

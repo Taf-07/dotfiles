@@ -21,7 +21,3 @@ source = ~/.config/hypr/autostart.conf
 
 # Add any other personal Hyprland configuration below
 # windowrule = workspace 5, class:qemu
-
-
-monitor=eDP-1,1920x1080@144.00,1728x0,1.00
-monitor=HDMI-A-1,1920x1080@60.00,-192x-192,1.00
