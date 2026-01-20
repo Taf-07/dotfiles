@@ -18,6 +18,7 @@ function y() {
 
 alias cat='lolcat'
 alias live="live-server --no-browser"
+alias ts="npx tsc --watch"
 # Add your own exports, aliases, and functions here.
 #
 # Make an alias for invoking commands you use constantly
